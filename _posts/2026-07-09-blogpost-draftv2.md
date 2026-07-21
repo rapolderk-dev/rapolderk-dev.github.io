@@ -54,7 +54,7 @@ In this blog post, we explore a recent approach to this problem called Multi-rob
     </nav>
 
 ## Multi-robot motion planning
-To design such a strategy, we first need to formalize the problem. Multi-robot motion planning (MRMP) asks: given a set of robots with start and goal configurations, how can we find a collision-free trajectory for each robot over time while optimizing an objective function \\(J\\)? This objective can encode a variety of goals, such as trajectory smoothness, energy efficiency, or application-specific task objectives.
+To design such a coordination strategy, we first need to formalize the problem. Multi-robot motion planning (MRMP) asks: given a set of robots with start and goal configurations, how can we find a collision-free trajectory for each robot over time while optimizing an objective function \\(J\\)? This objective can encode a variety of goals, such as trajectory smoothness, energy efficiency, or application-specific task objectives.
 
 <figure class="blog-figure">
   <img src="/images/blogpost-draftv2/mrmp-weave-20.gif" alt="Animation of many robots coordinating their trajectories in a weave scenario">
