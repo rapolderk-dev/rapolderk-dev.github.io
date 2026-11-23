@@ -29,7 +29,8 @@ $sidebar-screen-min-width   : 1024px;
 /* Default light theme for the site */
 :root {
     --global-base-color                 : #{$primary-color};
-    --global-bg-color                   : #fff;
+    --global-bg-color                   : #f6f7f8;
+    --global-card-bg-color              : #fff;
     --global-footer-bg-color            : #f2f3f3;
     --global-border-color               : #{$lighter-gray};
     --global-dark-border-color          : #bdc1c4;
@@ -42,7 +43,7 @@ $sidebar-screen-min-width   : 1024px;
     --global-masthead-link-color        : #{$dark-gray};
     --global-masthead-link-color-hover  : mix(#000, #{$gray}, 25%);    
     --global-text-color                 : #{$dark-gray};
-    --global-text-color-light           : #{$light-gray};
+    --global-text-color-light           : #{mix(#000, $gray, 15%)}; /* darker than $light-gray so it stays readable on the grey background */
     --global-thead-color                : #{$lighter-gray};
 }
 

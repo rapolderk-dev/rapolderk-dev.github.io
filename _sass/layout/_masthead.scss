@@ -79,3 +79,15 @@
   border-bottom: 2px solid var(--global-text-color);
   /* No need to repeat pointer-events and cursor here */
 }
+
+/* Show the moon icon immediately in dark mode, before the JavaScript swaps the icon class */
+html[data-theme="dark"] #theme-icon::before {
+  content: "\f186"; /* fa-moon */
+}
+
+/* Light mode: white header bar on the grey page background */
+html:not([data-theme="dark"]) .masthead {
+  /* everything inside the header uses the white card color as its background */
+  --global-bg-color: var(--global-card-bg-color);
+  background: var(--global-card-bg-color);
+}

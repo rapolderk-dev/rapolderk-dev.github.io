@@ -23,14 +23,15 @@ repository               : "rapolderk-dev/rapolderk-dev.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "portrait.jpg"
+  sidebar_avatar   : false # true = also show the photo in the left sidebar
   name             : "Kevin Rapolder"
   pronouns         : # example: "she/her"  
   bio              : "B.Sc. Computer Science"
   location         : "Stuttgart"
-  employer         : "University of stuttgart"
+  employer         : "University of Stuttgart"
   uri              : # URL
-  email            : "st192967@stud-uni.de" 
+  email            : "st192967@stud.uni-stuttgart.de" 
 
   # Academic websites
   academia         : # URL
@@ -124,7 +125,7 @@ staticman:
       options:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
+  hide                   : true      # change to false to show the RSS feed link in the footer
   path                   : # blank (default) uses feed.xml
 
 
@@ -230,7 +231,7 @@ defaults:
       author_profile: true
       read_time: true
       comments: true
-      share: true
+      share: false
       related: true
   # _pages
   - scope:

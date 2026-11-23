@@ -4,6 +4,9 @@ date: 2026-07-22
 permalink: /posts/2026/07/multi-robot-motion-planning-with-diffusion-models/
 redirect_from:
   - /posts/2026/07/blogpost-draftv2/
+excerpt: "How can a team of robots plan collision-free paths when the planner has only ever seen single-robot data? A walkthrough of Multi-robot Multi-model Planning Diffusion (MMD), which pairs diffusion models with classic multi-agent search."
+header:
+  teaser: "blogpost-draftv2/figure-01-page-03.png"
 tags:
   - blog
 ---

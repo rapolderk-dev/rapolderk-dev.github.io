@@ -1,0 +1,25 @@
+{% include base_path %}
+{% assign words = post.content | strip_html | number_of_words %}
+{% assign minutes = words | divided_by: site.words_per_minute %}
+{% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
+<article class="post-card" itemscope itemtype="http://schema.org/CreativeWork">
+  {% if post.header.teaser %}
+    <a class="post-card__teaser" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
+      <img src="{% if post.header.teaser contains '://' %}{{ post.header.teaser }}{% else %}{{ post.header.teaser | prepend: '/images/' | relative_url }}{% endif %}" alt="" loading="lazy">
+    </a>
+  {% endif %}
+  <div class="post-card__body">
+    <p class="post-card__meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+      <span class="post-card__sep" aria-hidden="true">&middot;</span>
+      <span>{{ minutes }} min read</span>
+    </p>
+    <h3 class="post-card__title" itemprop="headline">
+      <a href="{{ post.url | relative_url }}" rel="permalink">{{ post.title }}</a>
+    </h3>
+    {% if post.excerpt %}
+      <p class="post-card__excerpt" itemprop="description">{{ post.excerpt | strip_html | strip_newlines | truncate: 260 }}</p>
+    {% endif %}
+    <a class="post-card__more" href="{{ post.url | relative_url }}">Read post <span aria-hidden="true">&rarr;</span></a>
+  </div>
+</article>
