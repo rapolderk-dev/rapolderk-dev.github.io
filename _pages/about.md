@@ -12,7 +12,7 @@ redirect_from:
   <img class="home-intro__photo" src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="Portrait of {{ site.author.name }}">
   <div class="home-intro__text">
   <h1 class="home-intro__title">Hi, I'm Kevin</h1>
-  <p class="home-intro__lead">I'm a Computer Science student (B.Sc.) at the University of Stuttgart. On this site I write about topics I dig into during university projects and seminars &ndash; most recently multi-robot motion planning with diffusion models.</p>
+  <p class="home-intro__lead">I'm a Computer Science student (B.Sc.) at the University of Stuttgart. On this site I write about topics I dig into during university projects &ndash; most recently multi-robot motion planning with diffusion models.</p>
   </div>
 </section>
 

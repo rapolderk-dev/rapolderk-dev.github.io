@@ -182,3 +182,111 @@ html[data-theme="dark"] .post-card {
 .author__content:first-child {
   padding-left: 0;
 }
+
+/* ==========================================================================
+   CV PAGE
+   ========================================================================== */
+
+.cv {
+  max-width: 770px;
+}
+
+.cv-section {
+  margin: 1em 0 1.5em;
+  padding: 1.5em 1.75em 0.75em;
+  border: 1px solid var(--global-border-color);
+  border-radius: 12px;
+  background: var(--global-card-bg-color);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 4px 16px rgba(16, 24, 40, 0.06);
+}
+
+html[data-theme="dark"] .cv-section {
+  box-shadow: none;
+}
+
+.archive .cv-section__title {
+  margin: 0 0 1em;
+  padding: 0;
+  border: 0;
+  font-size: $type-size-4;
+  color: var(--global-base-color);
+}
+
+html[data-theme="dark"] .archive .cv-section__title {
+  color: var(--global-link-color);
+}
+
+.cv-entry {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.15em 1.5em;
+  margin-bottom: 1.25em;
+
+  @include breakpoint($medium) {
+    grid-template-columns: 8em 1fr;
+  }
+}
+
+.cv-entry__date {
+  padding-top: 0.1em;
+  font-size: $type-size-6;
+  font-variant-numeric: tabular-nums;
+  color: var(--global-text-color-light);
+  white-space: nowrap;
+}
+
+.archive .cv-entry__title {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.archive .cv-entry__org {
+  margin: 0.1em 0 0.35em;
+  font-size: $type-size-6;
+  color: var(--global-text-color-light);
+}
+
+.archive .cv-entry__note {
+  margin: 0.4em 0 0.1em;
+  font-size: $type-size-6;
+}
+
+.archive .cv-entry__list {
+  margin: 0.2em 0 0;
+  padding-left: 1.2em;
+  font-size: $type-size-6;
+
+  li {
+    margin-bottom: 0.15em;
+  }
+}
+
+.archive .cv-skills {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.15em 1.5em;
+  margin: 0 0 1.25em;
+  font-size: $type-size-6;
+
+  @include breakpoint($medium) {
+    grid-template-columns: 8em 1fr;
+  }
+
+  dt,
+  dd {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    float: none;
+    line-height: 1.5;
+  }
+
+  dt {
+    font-weight: 600;
+  }
+
+  dd {
+    margin-bottom: 0.6em;
+  }
+}
